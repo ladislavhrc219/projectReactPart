@@ -1,130 +1,89 @@
-
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+export default class Footer extends React.Component {
+  render(){
+    return (
+      <footer className="main-footer">
+        <div className="container">
+          <div className="row">
+                <div className="col-lg-3">
+                  <h4 className="h6">About Us</h4>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                  <hr/>
+                  <h4 className="h6">Join Our Monthly Newsletter</h4>
+                  <form>
+                    <div className="input-group">
+                        <input type="text" className="form-control"/>
+                        <div className="input-group-append">
+                          <button type="button" className="btn btn-secondary"><i className="fa fa-send"></i></button>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+                <div className="col-lg-3">
+                  <h4 className="h6">Internship</h4>
+                  <ul className="list-unstyled footer-blog-list">
+                    <li className="d-flex align-items-center">
+                      <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                      <div className="text">
+                        <h5 className="mb-0"> <a href="post.html">Blog post name</a></h5>
+                      </div>
+                    </li>
+                    <li className="d-flex align-items-center">
+                      <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                      <div className="text">
+                        <h5 className="mb-0"> <a href="post.html">Blog post name</a></h5>
+                      </div>
+                    </li>
+                    <li className="d-flex align-items-center">
+                      <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                      <div className="text">
+                        <h5 className="mb-0"> <a href="post.html">Very very long blog post name</a></h5>
+                      </div>
+                    </li>
+                  </ul>
+                  <hr className="d-block d-lg-none"></hr>
+              </div>
+              <div className="col-lg-3">
+              <h4 className="h6">Experience abroad</h4>
+              <ul className="list-unstyled footer-blog-list">
+                <li className="d-flex align-items-center">
+                  <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                  <div className="text">
+                    <h5 className="mb-0"> <a href="post.html">Blog post name</a></h5>
+                  </div>
+                </li>
+                <li className="d-flex align-items-center">
+                  <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                  <div className="text">
+                    <h5 className="mb-0"> <a href="post.html">Blog post name</a></h5>
+                  </div>
+                </li>
+                <li className="d-flex align-items-center">
+                  <div className="image"><img src="img/detailsquare.jpg" alt="..." className="img-fluid"/></div>
+                  <div className="text">
+                    <h5 className="mb-0"> <a href="post.html">Very very long blog post name</a></h5>
+                  </div>
+                </li>
+              </ul>
+              <hr className="d-block d-lg-none"/>
+            </div>
+              <div className="col-lg-3">
+                <h4 className="h6">Contact</h4>
+                <p className="text-uppercase"><a href="https://www.iaeste.cz/"><strong>IAESTE Czech Republic</strong></a><br/>Zikova 4 <br/>Praha 6 <br/>166 36 <br/><strong>Czech Republic</strong></p><a href="contact.html" className="btn btn-template-main">Go to contact page</a>
+                <hr className="d-block d-lg-none"/>
+              </div>
+            <div className="col-lg-3">
+                  <ul className="list-inline photo-stream">
+                    <li className="list-inline-item"><a href="#"></a></li>
+                    <li className="list-inline-item"><a href="#"></a></li>
+                    <li className="list-inline-item"><a href="#"></a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+      </footer>
 
-const FooterPage = () => {
-  return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title"> Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-      <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com"> Eshop</a>
-        </MDBContainer>
-      </div>
-    </MDBFooter>
-  );
+    )
+  }
 }
-
-export default FooterPage;
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://material-ui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     minHeight: '10vh',
-//   },
-//   main: {
-//     marginTop: theme.spacing(8),
-//     marginBottom: theme.spacing(2),
-//   },
-//   footer: {
-//     padding: theme.spacing(2),
-//     marginTop: 'auto',
-//     backgroundColor: 'white',
-//   },
-// }));
-
-// export default function StickyFooter() {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.root}>
-//       <CssBaseline />
-
-//       <footer className={classes.footer}>
-//         <Container maxWidth="sm">
-//           <Typography variant="body1">My sticky footer can be found here.</Typography>
-//           <Copyright />
-//         </Container>
-//       </footer>
-//     </div>
-//   );
-// }
-
-// import React from 'react';
-// import { Container, Col, Row } from 'reactstrap';
-
-// export default class Footer extends React.Component {
-
-//   render() {
-//     return(
-//       <Container w-100 fluid style={{ backgroundColor:'#427172', listStyleType:'none', justifyContent:'space-around', padding:'2em'}}>
-//         <Row>
-
-
-//               <li>@BOTTCAMP PRG</li>
-//               <br></br>
-//               <li>TERMS OF USE</li>
-//               <br></br>
-//               <li>PRIVACY</li>
-//               <br></br>
-//               <li>COOKIES</li>
-//               <br></br>
-//               <li>ADS</li>
-//               <br></br>
-
-//               <li>PRIVACY SETTING</li>
-//               <br></br>
-//               <li>SOCIAL CONTACTS</li>
-
-
-//         </Row>
-//       </Container>
-//     )
-//   }
-// }
